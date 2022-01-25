@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Joseph</title>
+    <link rel= "stylesheet" href= "./styles.css">
+    <script src= "https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_K1PoFs8pB2YVWStDxrUls");
+    })();
+  </script>
+
+</head>
+<body>
+    <section id="landing-page" onmousemove="moveBackground(event)" >
+        <nav>
+          <figure>
+            <img id="personal-logo" src="./images/jjlogo.png" alt="">
+          </figure>
+          <ul class="nav__link--list">
+            <li class="nav__link" onclick="toggleModal()">
+              <a href="#" class="
+                nav__link--anchor
+                link__hover-effect
+                link__hover-effect--black
+              ">About</a>
+            </li>
+            <li class="nav__link">
+              <a href="#projects" class="
+                nav__link--anchor
+                link__hover-effect
+                link__hover-effect--black
+              ">Projects</a>
+            </li>
+            <li class="nav__link" onclick="toggleModal()" >
+              <a href="#" class="
+                nav__link--anchor
+                link__hover-effect
+                link__hover-effect--black
+              ">Contact</a>
+            </li>
+            <li class="nav__link click" onclick="toggleContrast()">
+              <a href="#" class="
+                nav__link--anchor
+                link__hover-effect
+                link__hover-effect--black
+              "><i class="fas fa-adjust"></i></a>
+            </li>
+          </ul>
+        </nav>
+        <header class="header">
+            <div class="header__content">
+            
+            <h1 class="title">
+                Hey <span class= "hand">👋</span>
+            </h1>
+            
+           
+            <h1 class="title blue">I'm Jonathan</h1>
+            <p class="header__para">
+                    I'm a <b class= "blue">Frontend Software Engineer</b> with a strong passion for
+                    building web applications with great user experiences.
+                    <br>
+                    Here's a bit more <b class="blue click"  onclick="toggleModal()">about me. </b>
+            </p>
+            <div class="social_list">
+                <a href= "/assets/resume.pdf" target="_blank" class="social_link click ">
+                    <i class="fas fa-file-pdf"></i>
+                </a>
+                <a href= "https://github.com/JonJoey" target="_blank" class="social_link click ">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href= "https://www.linkedin.com/in/jayyjoseph/" target="_blank" class="social_link click ">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+           </div>
+    </header>
+    <a href="#">
+    <button class="mail_btn click" onclick="toggleModal()">
+        <i class="fas fa-envelope"></i>
+    </button>
+    </a>
+    <a href="#projects" class="scroll">
+        <div class="scroll_icon click"></div>
+    </a>
+
+     <div class="modal">
+      <div class="modal__half modal__about">
+        <h3 class="modal__title modal__title--about">Here's a bit more about me</h3>
+        <h4 class="modal__sub-title modal__sub-title--about">Front-End Software Engineer</h4>
+        <p class="model__para">
+          I'm a 18 year old  <b class="blue"> frontend software engineer </b> currently attending Boston University. I have a strong passion for developing websites that offer great <b class="blue">user experiences. </b>
+          <br>
+          
+           I currently use HTML/CSS, JavaScirpt, React, Python and many more applications to build beautiful and repsonsive projects.
+        </p>
+        <div class="modal__languages">
+          
+           <figure class="modal__language">
+            <img class="modal__language--img"src="./images/html5logo.png" alt="">
+            <span class="language__name">HTML</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./images/css3logo.png" alt="">
+            <span class="language__name">CSS/span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./images/JavaScript-logo.png" alt="">
+            <span class="language__name">JavaScript</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./images/pythonlogo.png" alt="">
+            <span class="language__name">Python</span>
+          </figure> 
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./images/bootstrap-logo.svg" alt="">
+            <span class="language__name">Bootstrap 5</span>
+          </figure> 
+          <figure class="modal__language">
+            <img class="modal__language--img--react" src="./images/reactlogo.png" alt="">
+            <span class="language__name">React</span>
+          </figure> 
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./images/vscodelogo.png" alt="">
+            <span class="language__name">VS Code</span>
+          </figure> 
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./images/typescriptlogo.png" alt="">
+            <span class="language__name">TypeScript</span>
+          </figure> 
+        </div>
+
+      </div>
+      
+      <div class= "modal__half modal__contact">
+        <i class="fas fa-times modal__exit click" onclick="toggleModal()" ></i>
+        <h3 class="modal__title modal__title--contact">Let's have a chat </h3>
+        <h4 class="modal__sub-title modal__sub-title--contact"> Currently open to new opportunities! </h4>
+        <form id="contact__form" onsubmit="contact(event)">
+          <div class="form__item">
+            <label class="form__item--label">Name</label>
+            <input class="input" name=user_name type="text" required> </input>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Email</label>
+            <input class="input" name=user_email type="email" required></input>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Message</label>
+            <textarea class="input" name=user_message type="text" required> </textarea>
+          </div>
+          <button id="contact__submit" class="form__submit">Submit</button>
+        </form>
+        <div class="modal__overlay modal__overlay--loading">
+          <i class="fas fa-spinner"></i>
+        </div>
+        <div class="modal__overlay modal__overlay--success">
+          Thanks for the message! I'll get back to you soon.
+        </div>
+      </div>
+      
+    </div>  
+
+    <!-- <img src="./assets/circle.svg" class="shape shape--0">
+    <img src="./assets/semi circle.svg" class="shape shape--1">
+    <img src="./assets/squiggly.svg" class="shape shape--2" >
+    <img src="./assets/triangle.svg" class="shape shape--3">
+    <img src="./assets/triangle.svg" class="shape shape--4">
+    <img src="./assets/circle.svg" class="shape shape--5">
+    <img src="./assets/squiggly.svg" class="shape shape--6">
+    <img src="./assets/semi circle.svg" class="shape shape--7">
+    <img src="./assets/triangle.svg" class="shape shape--8"> -->
+    </section>
+    
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section_title">
+                    Here are some of my <span class="blue">projects...Coming soon!</span>
+                </h1>
+                <ul class="project__list">
+                    <li class="project"> 
+                      <div class="project__wrapper"> 
+                        <img src="BlogCover.png" class="project__image" alt="">
+                        <div class="project__wrapper--bg"> </div>
+                        <div class="project__description">
+                          <h3 class="project__description--title">Blog Template Project</h3>
+                          
+                          <h4 class="project__description--sub-title">
+                            HTML, CSS,JavaScript, JQuery
+                          </h4>
+                          
+                          <p class="project__description--para">
+                            I created a stunning template for a blog
+                          </p>
+                          <div class="project__description--links">
+                            <a href="#" class="project__description--link">
+                              <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://jonathanjosephblog.netlify.app/" target="_blank" class="project__description--link">
+                              <i class="fas fa-link"></i>
+                            </a>
+                          
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <!-- <li class="project"> 
+                      <div class="project__wrapper"> 
+                        <img src="./images/blinker mockup.png" class="project__image" alt="">
+                        <div class="project__wrapper--bg"> </div>
+                        <div class="project__description">
+                          <h3 class="project__description--title">Car Sales Project</h3>
+                          
+                          <h4 class="project__description--sub-title">
+                            HTML,CSS,JavaScript,Vue, Vuex
+                          </h4>
+                          
+                          <p class="project__description--para">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, natus! Lorem ipsum dolor sit amet.
+                          </p>
+                          <div class="project__description--links">
+                            <a href="#" class="project__description--link">
+                              <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project__description--link">
+                              <i class="fas fa-link"></i>
+                            </a>
+                          
+                          </div>
+                        </div>
+                      </div>
+                    </li> -->
+                    
+                  
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+
+        
+        <figure>
+          <img class="footer__logo--image" src="./images/jjlogo.png" alt="">
+        </figure>
+        <div class="footer__social--list">
+          <a href="https://github.com/JonJoey" class="footer__social--link
+          link__hover-effect
+          link__hover-effect--white">
+          Github
+          </a>
+          <a href="https://www.linkedin.com/in/jayyjoseph/" class="footer__social--link
+          link__hover-effect
+          link__hover-effect--white">
+          Linkedin
+          </a>
+          <a href="#" onclick="toggleModal()" class="footer__social--link
+          link__hover-effect
+          link__hover-effect--white">
+          Contact
+          </a>
+          <a href="/assets/resume.pdf"  class="footer__social--link
+          link__hover-effect
+          link__hover-effect--white">
+          Resume
+          </a>
+        
+        </div>
+        <div class="footer__copyright"> Copyright &copy; Jonathan Joseph</div>
+        </div>
+
+       </div>
+       
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
